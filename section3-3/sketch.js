@@ -25,7 +25,12 @@ function isLeapYear(y){
 }
 
 function daysInYear(y){
-  // BLANK[1]
+  if(isLeapYear(y)){
+      console.log(y + "年は366日あります");
+   }
+  else{
+      console.log(y + "年は365日あります");
+}
 }
 
 function daysInMonth(y, m){
