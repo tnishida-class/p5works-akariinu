@@ -4,6 +4,7 @@ function setup(){
   calendar(2019, 10);
 
   for(let i = 2000; i <= 2100; i++){
+    console.log(i + "年は" + daysInYear(i) + "日あります");
     if(isLeapYear(i)){
       console.log(i + "年はうるう年です");
     }
@@ -25,12 +26,7 @@ function isLeapYear(y){
 }
 
 function daysInYear(y){
-  if(isLeapYear(y)){
-      console.log(y + "年は366日あります");
-   }
-  else{
-      console.log(y + "年は365日あります");
-}
+    return isLeapYear(y) ? 366 : 365;
 }
 
 function daysInMonth(y, m){
